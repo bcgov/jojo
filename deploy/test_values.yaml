@@ -1,0 +1,15 @@
+nginx:
+  image:
+    pullPolicy: Always
+  ingress:
+     hostname: nginx-e27db1-test.apps.emerald.devops.gov.bc.ca
+  podLabels: 
+    environment: test
+    env: staging
+    owner: "jojo-team"
+    project: "abcd"
+  commonLabels:
+    environment: test
+    env: staging
+    owner: "jojo-team"
+    project: "abcd"

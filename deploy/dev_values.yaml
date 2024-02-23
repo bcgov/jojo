@@ -9,21 +9,21 @@ nginx:
     enabled: false
   ingress:
     enabled: true
-    hostname: nginx-{{cookiecutter.licence_plate}}-dev.apps.emerald.devops.gov.bc.ca
-  version: "{{ cookiecutter.nginx_version }}"
+    hostname: nginx-e27db1-dev.apps.emerald.devops.gov.bc.ca
+  version: "15.11.0"
   image:
     pullPolicy: Always
   podLabels:
     environment: dev
     env: development
-    owner: "{{cookiecutter.team_name}}"
-    project: "{{cookiecutter.project_name}}"
+    owner: "jojo-team"
+    project: "abcd"
     DataClass: "Medium"
   commonLabels:
     environment: dev
     env: development
-    owner: "{{cookiecutter.team_name}}"
-    project: "{{cookiecutter.project_name}}"
+    owner: "jojo-team"
+    project: "abcd"
     DataClass: "Medium"
   replicaCount: 1
 
@@ -34,8 +34,8 @@ postgresql:
   commonLabels:
     environment: dev
     env: development
-    owner: "{{cookiecutter.team_name}}"
-    project: "{{cookiecutter.project_name}}"
+    owner: "jojo-team"
+    project: "abcd"
     DataClass: "Medium"
   primary:
     podSecurityContext:
@@ -45,12 +45,12 @@ postgresql:
     labels:
       environment: dev
       env: development
-      owner: "{{cookiecutter.team_name}}"
-      project: "{{cookiecutter.project_name}}"
+      owner: "jojo-team"
+      project: "abcd"
       DataClass: "Medium"
     podLabels:
       environment: dev
       env: development
-      owner: "{{cookiecutter.team_name}}"
-      project: "{{cookiecutter.project_name}}"
+      owner: "jojo-team"
+      project: "abcd"
       DataClass: "Medium"

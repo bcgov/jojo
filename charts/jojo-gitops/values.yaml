@@ -1,0 +1,26 @@
+# jojo-charts/values.yaml
+my_app_name: "jojo"
+
+nginx:
+  enabled: true
+  chart: "bitnami/nginx"
+  service:
+    type: ClusterIP
+  podSecurityContext:
+    enabled: false
+  containerSecurityContext:
+    enabled: false
+  ingress:
+    enabled: true
+    hostname: nginx-e27db1-dev.apps.emerald.devops.gov.bc.ca
+  version: "15.11.0"
+
+postgresql:
+  enabled: true
+  chart: "bitnami/postgresql"
+  version: "14.1.1"
+
+aspnet-core:
+  enabled: false
+  chart: "bitnami/aspnetcore"
+  version: "5.5.0"

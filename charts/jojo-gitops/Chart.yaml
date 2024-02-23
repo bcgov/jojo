@@ -1,8 +1,8 @@
-# {{ cookiecutter.app_name }}-charts/Chart.yaml
+# jojo-charts/Chart.yaml
 apiVersion: v2
-name: {{ cookiecutter.app_name }}-charts
+name: jojo-charts
 
-description: Helm chart for {{ cookiecutter.app_name }}
+description: Helm chart for jojo
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -26,14 +26,14 @@ appVersion: "1.16.0"
 
 dependencies:
   - name: nginx
-    version: "{{ cookiecutter.nginx_version }}"
+    version: "15.11.0"
     repository: "https://charts.bitnami.com/bitnami"
     condition: nginx.enabled
   - name: postgresql
-    version: "{{ cookiecutter.postgresql_version }}"
+    version: "14.1.1"
     repository: "https://charts.bitnami.com/bitnami"
     condition: postgresql.enabled
   - name: aspnet-core
-    version: "{{ cookiecutter.aspnetcore_version }}"
+    version: "5.5.0"
     repository: "https://charts.bitnami.com/bitnami"
     condition: aspnet-core.enabled

@@ -1,0 +1,21 @@
+project: e27db1
+kind: Application
+metadata:
+  name: jojo-gitops-dev
+spec:
+  destination:
+    name: ''
+    namespace: e27db1-dev
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: charts/jojo-gitops
+    repoURL: 'git@github.com:bcgov-c/tenant-gitops-e27db1.git'
+    targetRevision: develop
+    helm:
+      valueFiles:
+        - $values/deploy/dev_values.yaml
+  project: e27db1
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
